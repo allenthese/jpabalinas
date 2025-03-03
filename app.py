@@ -115,7 +115,7 @@ def export_csv():
     return send_file(byte_output, mimetype='text/csv', as_attachment=True, download_name='customers.csv')
 
 # Configure wkhtmltopdf for PDF export
-PDFKIT_CONFIG = pdfkit.configuration(wkhtmltopdf=r"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
+# PDFKIT_CONFIG = pdfkit.configuration(wkhtmltopdf=r"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
 
 # Route for exporting customer data as a styled PDF
 @app.route('/export/pdf')
@@ -213,4 +213,4 @@ def report():
 
 # Run the application
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
