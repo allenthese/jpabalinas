@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.9 on win32)" generated="2025-04-09T18:15:44.596785" rpa="false" schemaversion="5">
+<suite id="s1" name="Jpabalinas" source="C:\Users\allen\PycharmProjects\jpabalinas">
+<suite id="s1-s1" name="Test" source="C:\Users\allen\PycharmProjects\jpabalinas\test">
+<suite id="s1-s1-s1" name="Ui" source="C:\Users\allen\PycharmProjects\jpabalinas\test\ui">
+<suite id="s1-s1-s1-s1" name="Crm Ui" source="C:\Users\allen\PycharmProjects\jpabalinas\test\ui\crm_ui.robot">
+<kw name="Scenario: Register a new user and log in" type="SETUP">
+<kw name="User Name" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:45.176723" level="INFO">${username} = tashawinters</msg>
+<var>${username}</var>
+<status status="PASS" start="2025-04-09T18:15:45.175724" elapsed="0.000999"/>
+</kw>
+<kw name="Password" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:45.176723" level="INFO">${password} = @*G6P)kJ)1</msg>
+<var>${password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2025-04-09T18:15:45.176723" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:45.177730" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-09T18:15:45.177730" elapsed="1.232192"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.410454" elapsed="0.032561"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=heading-login</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.443015" elapsed="0.010946"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:46.453961" level="INFO">Opening url 'http://127.0.0.1:5000/register'</msg>
+<arg>${URL}/register</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.453961" elapsed="0.047802"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=heading-register</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.501763" elapsed="0.009220"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:46.510983" level="INFO">Typing text 'tashawinters' into text field 'id=input-username'.</msg>
+<arg>id=input-username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.510983" elapsed="0.073915"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:46.584898" level="INFO">Typing text '@*G6P)kJ)1' into text field 'id=input-password'.</msg>
+<arg>id=input-password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.584898" elapsed="0.058212"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:46.644339" level="INFO">Clicking button 'id=btn-register'.</msg>
+<arg>id=btn-register</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.644339" elapsed="0.062200"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.707538" elapsed="0.007504"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:46.715042" level="INFO">Opening url 'http://127.0.0.1:5000/login'</msg>
+<arg>${URL}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.715042" elapsed="0.229725"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=heading-login</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.944767" elapsed="0.007589"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:46.953516" level="INFO">Typing text 'tashawinters' into text field 'id=input-username'.</msg>
+<arg>id=input-username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:46.952356" elapsed="0.050456"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.002812" level="INFO">Typing text '@*G6P)kJ)1' into text field 'id=input-password'.</msg>
+<arg>id=input-password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.002812" elapsed="0.052602"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.056446" level="INFO">Clicking button 'id=btn-login'.</msg>
+<arg>id=btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.056446" elapsed="0.048853"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.105299" elapsed="0.261118"/>
+</kw>
+<status status="PASS" start="2025-04-09T18:15:45.175724" elapsed="2.190693"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Scenario: Add a new customer with fake data" line="48">
+<kw name="Name" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:47.367417" level="INFO">${name} = Andrew Taylor</msg>
+<var>${name}</var>
+<doc>:example: 'John Doe'</doc>
+<status status="PASS" start="2025-04-09T18:15:47.367417" elapsed="0.000000"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:47.368420" level="INFO">${email} = andres81@example.net</msg>
+<var>${email}</var>
+<status status="PASS" start="2025-04-09T18:15:47.367417" elapsed="0.001003"/>
+</kw>
+<kw name="Phone Number" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:47.368420" level="INFO">${phone} = 266.586.6033x167</msg>
+<var>${phone}</var>
+<status status="PASS" start="2025-04-09T18:15:47.368420" elapsed="0.000000"/>
+</kw>
+<kw name="Company" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:47.368420" level="INFO">${company} = Patterson-Tate</msg>
+<var>${company}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<status status="PASS" start="2025-04-09T18:15:47.368420" elapsed="0.000000"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.369689" level="INFO">Clicking link 'id=btn-add-customer'.</msg>
+<arg>id=btn-add-customer</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.369689" elapsed="0.068266"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.438931" level="INFO">Typing text 'Andrew Taylor' into text field 'id=input-name'.</msg>
+<arg>id=input-name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.437955" elapsed="0.069100"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.508513" level="INFO">Typing text 'andres81@example.net' into text field 'id=input-email'.</msg>
+<arg>id=input-email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.508513" elapsed="0.057480"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.566992" level="INFO">Typing text '266.586.6033x167' into text field 'id=input-phone'.</msg>
+<arg>id=input-phone</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.566992" elapsed="0.067884"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.634876" level="INFO">Typing text 'Patterson-Tate' into text field 'id=input-company'.</msg>
+<arg>id=input-company</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.634876" elapsed="0.062194"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:47.698082" level="INFO">Clicking button 'id=btn-submit-customer'.</msg>
+<arg>id=btn-submit-customer</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.697070" elapsed="0.080568"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.777638" elapsed="0.021477"/>
+</kw>
+<status status="PASS" start="2025-04-09T18:15:47.366417" elapsed="0.433696"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Scenario: Add a new order with fake data" line="63">
+<kw name="Word" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:47.801619" level="INFO">${product} = law</msg>
+<var>${product}</var>
+<doc>Generate a word.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.800113" elapsed="0.001506"/>
+</kw>
+<kw name="Random Int" owner="FakerLibrary">
+<msg time="2025-04-09T18:15:47.801619" level="INFO">${amount} = 7</msg>
+<var>${amount}</var>
+<arg>min=1</arg>
+<arg>max=10</arg>
+<doc>Generate a random integer between two integers ``min`` and ``max`` inclusive
+while observing the provided ``step`` value.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.801619" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-add-order</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T18:15:47.801619" elapsed="0.289868"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:48.093499" level="INFO">Clicking link 'id=btn-add-order'.</msg>
+<arg>id=btn-add-order</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.092991" elapsed="0.070590"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:48.164585" level="INFO">Typing text 'law' into text field 'id=input-product'.</msg>
+<arg>id=input-product</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.163581" elapsed="0.053534"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:48.218124" level="INFO">Typing text '7' into text field 'id=input-amount'.</msg>
+<arg>id=input-amount</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.217115" elapsed="0.041955"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:48.260577" level="INFO">Clicking button 'id=btn-submit-order'.</msg>
+<arg>id=btn-submit-order</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.260071" elapsed="0.048604"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.310048" elapsed="0.210643"/>
+</kw>
+<status status="PASS" start="2025-04-09T18:15:47.800113" elapsed="0.721930"/>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Scenario: Export customers as CSV via UI" line="75">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T18:15:48.523564" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024501A85190&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.522553" elapsed="0.001011"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>{"download.default_directory": "${DOWNLOAD_DIR.replace('/', '\\')}"}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.523564" elapsed="0.001001"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:48.524565" level="INFO">Opening url 'http://127.0.0.1:5000/export/csv'</msg>
+<arg>${URL}/export/csv</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.524565" elapsed="0.015344"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-09T18:15:48.540960" level="INFO">${file} = C:\Users\allen\Downloads\customers.csv</msg>
+<var>${file}</var>
+<arg>${DOWNLOAD_DIR}${/}customers.csv</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.540437" elapsed="0.000523"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-04-09T18:15:48.541485" level="FAIL">File 'C:\Users\allen\Downloads\customers.csv' does not exist.</msg>
+<arg>${file}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="FAIL" start="2025-04-09T18:15:48.540960" elapsed="0.001047">File 'C:\Users\allen\Downloads\customers.csv' does not exist.</status>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-04-09T18:15:49.542348" level="INFO" html="true">File '&lt;a href="file://C:\Users\allen\Downloads\customers.csv"&gt;C:\Users\allen\Downloads\customers.csv&lt;/a&gt;' exists.</msg>
+<arg>${file}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-04-09T18:15:49.542348" elapsed="0.000000"/>
+</kw>
+<arg>10x</arg>
+<arg>1s</arg>
+<arg>File Should Exist</arg>
+<arg>${file}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-09T18:15:48.540960" elapsed="1.001388"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2025-04-09T18:15:49.543376" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\allen\Downloads\customers.csv"&gt;C:\Users\allen\Downloads\customers.csv&lt;/a&gt;'.</msg>
+<arg>${file}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2025-04-09T18:15:49.543376" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-09T18:15:48.522553" elapsed="1.021827"/>
+</test>
+<test id="s1-s1-s1-s1-t4" name="Scenario: Export customers as PDF via UI" line="83">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T18:15:49.545357" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024501A73620&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T18:15:49.545357" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>{"download.default_directory": "${DOWNLOAD_DIR.replace('/', '\\')}"}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-09T18:15:49.545357" elapsed="0.000998"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:49.546860" level="INFO">Opening url 'http://127.0.0.1:5000/export/pdf'</msg>
+<arg>${URL}/export/pdf</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-09T18:15:49.546355" elapsed="0.465704"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-09T18:15:50.013110" level="INFO">${file} = C:\Users\allen\Downloads\customers.pdf</msg>
+<var>${file}</var>
+<arg>${DOWNLOAD_DIR}${/}customers.pdf</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-09T18:15:50.012583" elapsed="0.000527"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-04-09T18:15:50.013636" level="FAIL">File 'C:\Users\allen\Downloads\customers.pdf' does not exist.</msg>
+<arg>${file}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="FAIL" start="2025-04-09T18:15:50.013110" elapsed="0.000526">File 'C:\Users\allen\Downloads\customers.pdf' does not exist.</status>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-04-09T18:15:51.013698" level="INFO" html="true">File '&lt;a href="file://C:\Users\allen\Downloads\customers.pdf"&gt;C:\Users\allen\Downloads\customers.pdf&lt;/a&gt;' exists.</msg>
+<arg>${file}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-04-09T18:15:51.013698" elapsed="0.000000"/>
+</kw>
+<arg>10x</arg>
+<arg>1s</arg>
+<arg>File Should Exist</arg>
+<arg>${file}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-09T18:15:50.013110" elapsed="1.000588"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-04-09T18:15:51.014704" level="INFO">Starting process:
+taskkill /im acrobat.exe /f</msg>
+<msg time="2025-04-09T18:15:51.021722" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-04-09T18:15:51.095620" level="INFO">Process completed.</msg>
+<arg>taskkill</arg>
+<arg>/im</arg>
+<arg>${PDF_READER}</arg>
+<arg>/f</arg>
+<arg>shell=True</arg>
+<arg>stderr=STDOUT</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-04-09T18:15:51.014704" elapsed="0.080916"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-09T18:15:53.097026" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-09T18:15:51.096631" elapsed="2.000395"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2025-04-09T18:15:53.098034" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\allen\Downloads\customers.pdf"&gt;C:\Users\allen\Downloads\customers.pdf&lt;/a&gt;'.</msg>
+<arg>${file}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2025-04-09T18:15:53.098034" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-09T18:15:49.544380" elapsed="3.554656"/>
+</test>
+<kw name="Close browser" type="TEARDOWN">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:53.100038" level="INFO">Clicking link 'id=nav-logout'.</msg>
+<arg>id=nav-logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T18:15:53.100038" elapsed="0.044829"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-04-09T18:15:53.144867" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-04-09T18:15:53.144867" elapsed="0.002519"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=heading-login</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-09T18:15:53.147386" elapsed="0.036799"/>
+</kw>
+<status status="PASS" start="2025-04-09T18:15:53.100038" elapsed="0.084147"/>
+</kw>
+<doc>UI Tests for CRM Web App using Selenium and Faker</doc>
+<status status="PASS" start="2025-04-09T18:15:44.629681" elapsed="8.554504"/>
+</suite>
+<status status="PASS" start="2025-04-09T18:15:44.629681" elapsed="8.555680"/>
+</suite>
+<status status="PASS" start="2025-04-09T18:15:44.628122" elapsed="8.558263"/>
+</suite>
+<status status="PASS" start="2025-04-09T18:15:44.598981" elapsed="8.588404"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Jpabalinas" id="s1" pass="4" fail="0" skip="0">Jpabalinas</stat>
+<stat name="Test" id="s1-s1" pass="4" fail="0" skip="0">Jpabalinas.Test</stat>
+<stat name="Ui" id="s1-s1-s1" pass="4" fail="0" skip="0">Jpabalinas.Test.Ui</stat>
+<stat name="Crm Ui" id="s1-s1-s1-s1" pass="4" fail="0" skip="0">Jpabalinas.Test.Ui.Crm Ui</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
